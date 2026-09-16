@@ -1,101 +1,122 @@
 # Sakshi Dhaliwal
 
-**Software Engineer - ML & AI @ SAP** | Data Science @ SFU (Grad May 2027)
+**Software Engineer - ML & AI Intern @ SAP** | Data Science @ SFU (Grad May 2027)
 
-Full-stack software engineer building production ML systems. Specialized in ML infrastructure, MLOps, data engineering, and end-to-end system design.
+ML & AI engineer building production LLM systems. Focused on AI agents, prompt engineering, LLM evaluation, and applied machine learning.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sakshidhaliwal-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/sakshi-dhaliwal) [![GitHub](https://img.shields.io/badge/GitHub-followers-181717?style=flat&logo=github)](https://github.com/yourusername)
 
 ---
 
-## Current Work
+## Experience
 
-**Software Engineer - ML & AI @ SAP Inc.** | April 2026 - Present
+**The thread through my work:** taking ML from raw data all the way to reliable, production-grade systems.
 
-LLM-powered audit compliance verification system for data center and site leads.
+### Software Engineer - ML & AI Intern @ SAP Inc.
+*Vancouver, BC | April 2026 - Present*
 
-- Processing 100+ patrol tours deterministically across 456 sites, reducing audit review from 5 days to 3 mins
-- Reduced LLM processing from 8 min sequential baseline to <60 seconds via batching (10x API call reduction)
-- Rule engine validates scan completeness with 95% agreement to human reviewers on 5000+ labeled audits
+I build LLM services that people can trust in production. My compliance auditing system pairs a deterministic rule engine with model judgment, so verdicts stay auditable while the LLM handles severity and cross-tour patterns. I also made it fast and cheap to run at scale, turning days of manual audit review across hundreds of sites into minutes.
 
-**Previous:** AI Engineer Intern (LangGraph incident-triage agents) | Data Engineer Intern (Bronze/Silver/Gold ETL, 73 tables, 75% defect reduction)
+**Stack:** Node.js, SAP CAP, SAP BTP Cloud Foundry, XSUAA, LLMs
+
+### AI Engineer Intern @ SAP Inc.
+*Vancouver, BC | Jan 2026 - April 2026*
+
+I built an incident-triage agent that helps analysts find answers across a huge history of past incidents. The focus was making an agent safe to give real tools to: permissions scoped to the user, human approval before any write, resistance to prompt injection, and runs that recover cleanly when interrupted.
+
+**Stack:** LangGraph, SAP HANA Vector Search, Jira, JWT
+
+### Data Engineer Intern @ SAP Inc.
+*Vancouver, BC | Sep 2025 - Dec 2025*
+
+I unified data from disconnected systems like CCURE, Resolver, and ServiceNow into one layered pipeline, giving analytics and AI a single trusted source. That meant resolving the same entities across systems and catching bad data early, before it reached dashboards or models.
+
+**Stack:** SAP Datasphere, SQL, SAP Analytics Cloud, Medallion (Bronze/Silver/Gold) architecture
+
+### Hardware Engineer Intern, Data & Automation Support @ StructureCraft
+*Vancouver, BC | May 2024 - Aug 2024*
+
+I turned manufacturing validation logs and operator feedback into a model that flags risky CAD-to-CNC jobs before they reach the machine, and wired it directly into the design tools engineers already use so the risk score shows up in real time.
+
+**Stack:** XGBoost, Python, FastAPI, C#, RhinoCommon
 
 ---
 
 ## Projects
 
-### [Range of Motion](https://github.com/yourusername/range-of-motion) — Stroke Rehabilitation System
+### [Range of Motion](https://github.com/yourusername/range-of-motion) — Webcam Rehab Scorer
 
-**Winner: HackPrinceton 2026**
+**1st Place: HackPrinceton Spring 2026**
 
-Real-time gesture recognition for physical therapy assessment and FMA-UE clinical scoring.
+Real-time rehab scoring that calibrates range of motion to each patient's baseline instead of fixed angle thresholds.
 
-- 96% CV accuracy using MediaPipe and Random Forest
-- Live FMA-UE scoring from joint kinematics with per-patient baseline calibration
-- WebSocket streaming at sub-50ms latency, 14+ FPS on CPU deployment
+- Random Forest on 201 labeled reps from MediaPipe landmarks, 96% accuracy with EMA smoothing and hysteresis
+- Per-session calibration to each patient's baseline
+- WebSocket stream to a Three.js client at sub-50ms latency, live feedback at 25-30 FPS
 
-**Stack:** Python, FastAPI, MediaPipe, scikit-learn, React, Docker, MongoDB
+**Stack:** FastAPI, MediaPipe, React, Three.js, Docker, MongoDB
 
 ---
 
 ### [PulseRec](https://github.com/yourusername/pulserec) — Real-Time Recommendation Engine
 
-Multi-stage personalized feed recommender at scale.
+Personalized feed recommender over 2M interactions.
 
-- 3,400 events/sec through Kafka-to-Redis pipeline with <83ms end-to-end latency
-- Two-tower FAISS + Transformer ranker; +18.7% NDCG@10 improvement
-- Served 600 RPS at 3M requests/day with zero fallback failures
+- Two-tower FAISS retrieval into a Transformer ranker; +18.7% NDCG@10
+- Kafka-to-Redis pipeline at 3,400 events/sec; a new click changes the next recommendation within 83ms, no retraining
+- Served 620 RPS at 94ms p99 with batching, caching and fallbacks; 8s recovery under injected failures
 
 **Stack:** PyTorch, FAISS, Kafka, Redis, FastAPI
 
 ---
 
+### [Orbit](https://github.com/yourusername/orbit) — Self-Service ML Platform
+
+Takes training code to a live endpoint in one CLI command.
+
+- Argo-orchestrated Kubernetes jobs from training to serving
+- Reproducibility via content-hashed datasets and pinned code, config and seed; results within 1.2% across reruns
+- Promotion gated on PR-AUC and latency; canaries auto-roll back in 24s on drift or latency breach at 480 predictions/sec
+
+**Stack:** Kubernetes, Argo, MLflow, KServe, MinIO, Prometheus
+
+---
+
 ### [Synapse](https://github.com/yourusername/synapse) — Multiplayer AI Workspace
 
-Collaborative CRDT canvas with AI agents and offline-first sync.
+Offline-first canvas syncing docs, diagrams and tasks.
 
-- 5K ops/sec across 1,000 concurrent users; 142ms p90 latency
-- Yjs CRDT with 99.99% convergence; 10K conflicting ops merged without data loss
-- Git-style branching and replay over operation log with schema validation
+- 5K ops/sec across 1,000 concurrent users; 142ms p99 latency
+- Yjs CRDT sync with IndexedDB offline editing: 99.99% convergence, 10K conflicting ops merged without data loss in test
+- Git-style branching, replay and merge over an operation log; AI canvas edits applied only after schema validation
 
 **Stack:** React, TypeScript, Go, Yjs, PostgreSQL, LangGraph
 
 ---
 
-### [Orbit](https://github.com/yourusername/orbit) — Self-Service ML Platform
-
-End-to-end ML training and deployment infrastructure.
-
-- Argo-orchestrated Kubernetes; 1.2% variance across runs via content-hashing
-- Automated PR-AUC and latency canaries; 24s drift detection on 480 predictions/sec
-- Model versioning, experiment tracking, and gated promotion to production
-
-**Stack:** Kubernetes, Argo Workflows, MLflow, KServe, MinIO, Prometheus
-
----
-
 ## Technical Stack
 
-**Languages:** Python, TypeScript, SQL, Java, C++, Go, HTML/CSS
+**Languages:** Java, Python, C/C++, TypeScript, SQL, R, HTML/CSS
 
-**Backend & Systems:** FastAPI, Flask, Node.js, Spring Boot, gRPC, REST APIs
+**Backend & Systems:** Spring Boot, Node.js, REST, gRPC, Kafka, Redis, Concurrency, Thread Pools
 
-**Frontend:** React, Next.js, TypeScript
+**Frontend:** React, Next.js
 
-**Databases:** PostgreSQL, MongoDB, Supabase (Auth, RLS), Query Optimization
+**Databases:** PostgreSQL, MongoDB, Supabase (Auth, RLS), Indexing, Query Optimization
 
-**Infrastructure & MLOps:** Kubernetes, Argo Workflows, Docker, MLflow, KServe, Prometheus, SAP BTP Cloud Foundry, AWS
+**Cloud & Infrastructure:** AWS (EC2, RDS, S3, IAM), Docker, Kubernetes, Terraform, GitHub Actions, Linux, SAP BTP Cloud Foundry
 
-**ML & Data:** PyTorch, scikit-learn, pandas, NumPy, FAISS, Data Pipelines, ETL
+**ML & Data:** XGBoost, scikit-learn, pandas, NumPy, Feature Engineering, Model Evaluation, FastAPI
 
 ---
 
 ## Recognition
 
-- **HackPrinceton 2026** — Winner: Range of Motion (stroke rehab system)
-- **SAP Business Data Cloud Lead** — Women in Clean Tech initiative
+- **Regeneron ISEF 2026** — 1st Place, AI & Technology for Clinical Trials
+- **HackPrinceton Spring 2026** — 1st Place: Range of Motion
 - **2x MLH Hackathon Winner** — Best Use of Grok, Best Use of Arm
-- **Data Engineer Intern** — 75% data defect reduction via validation layer
+- **SAP Business Data Cloud Lead** — Internal Certification, SAP Inc. (2026)
+- **Design Coordinator** — Women in Clean Tech
 
 ---
 
@@ -105,7 +126,4 @@ End-to-end ML training and deployment infrastructure.
 **LinkedIn:** [linkedin.com/in/sakshi-dhaliwal](https://linkedin.com/in/sakshi-dhaliwal)  
 **Website:** [Your portfolio site]
 
-Open to ML infrastructure, MLOps, and distributed systems collaborations.
-
-
-
+Open to ML & AI engineering, LLM applications, AI agents, and prompt engineering collaborations.
