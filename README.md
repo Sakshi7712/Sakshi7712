@@ -124,6 +124,5 @@ Offline-first canvas syncing docs, diagrams and tasks.
 
 **Email:** ssa431@sfu.ca  
 **LinkedIn:** [linkedin.com/in/sakshi-dhaliwal](https://linkedin.com/in/sakshi-dhaliwal)  
-**Website:** [Your portfolio site]
 
 Open to ML & AI engineering, LLM applications, AI agents, and prompt engineering collaborations.
