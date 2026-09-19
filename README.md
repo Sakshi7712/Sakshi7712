@@ -127,12 +127,8 @@ Offline-first canvas syncing docs, diagrams and tasks.
 
 Open to ML & AI engineering, LLM applications, AI agents, and prompt engineering collaborations.
 
-## Contribution Graph
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/dog-output/dog-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/dog-output/dog-contribution-graph.svg">
+  <img alt="dog contribution graph" src="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/dog-output/dog-contribution-graph.svg">
 </picture>
-
----
