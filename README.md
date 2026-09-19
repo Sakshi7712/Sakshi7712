@@ -126,3 +126,13 @@ Offline-first canvas syncing docs, diagrams and tasks.
 **LinkedIn:** [linkedin.com/in/sakshi-dhaliwal](https://linkedin.com/in/sakshi-dhaliwal)  
 
 Open to ML & AI engineering, LLM applications, AI agents, and prompt engineering collaborations.
+
+## Contribution Graph
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Sakshi7712/Sakshi7712/output/pacman-contribution-graph.svg">
+</picture>
+
+---
