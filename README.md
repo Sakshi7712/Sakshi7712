@@ -4,7 +4,7 @@
 
 ML & AI engineer building production LLM systems. Focused on AI agents, prompt engineering, LLM evaluation, and applied machine learning.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-sakshi-dhaliwal-5071a224?astyle=flat&logo=linkedin)](https://linkedin.com/in/sakshi-dhaliwal) [![GitHub](https://img.shields.io/badge/GitHub-followers-181717?style=flat&logo=github)](https://github.com/yourusername)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sakshi_Dhaliwal-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/sakshi-dhaliwal-5071a224a/) [![GitHub](https://img.shields.io/badge/GitHub-followers-181717?style=flat&logo=github)](https://github.com/yourusername) [![GitHub](https://img.shields.io/badge/GitHub-followers-181717?style=flat&logo=github)](https://github.com/yourusername)
 
 ---
 
