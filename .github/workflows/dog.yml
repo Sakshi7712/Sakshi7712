@@ -25,7 +25,7 @@ jobs:
       - name: generate dog SVGs
         run: node .github/scripts/dog-graph.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DOG_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
 
       - name: push SVGs to the dog-output branch
